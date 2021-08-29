@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import style from "./ContactsForm.module.css";
 import { connect } from 'react-redux';
-import contactsAction from '../../redux/contact/contact-action';
-
+import { contactOperations } from '../../redux/contact';
 
 class ContactForm extends Component {
   state = {
@@ -66,6 +65,7 @@ handleChange = event => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  addContacts: contactForm => dispatch(contactsAction.addContacts(contactForm)),
+  addContacts: contactForm =>
+    dispatch(contactOperations.addContacts(contactForm)),
 });
 export default connect(null, mapDispatchToProps)(ContactForm);
