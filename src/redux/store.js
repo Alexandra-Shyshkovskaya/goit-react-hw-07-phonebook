@@ -3,7 +3,7 @@ import logger from 'redux-logger';
 import { contactReducer } from './contact';
 import {
   //persistStore,
-  persistReducer,
+  //persistReducer,
   FLUSH,
   REHYDRATE,
   PAUSE,
@@ -11,7 +11,6 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
 
 const middleware = [
   ...getDefaultMiddleware({
@@ -37,7 +36,6 @@ const store = configureStore({
 });
 
 //const persistor = persistStore(store);
-// eslint-disable-next-line
 //export default { store, persistor };
 
 export default store;

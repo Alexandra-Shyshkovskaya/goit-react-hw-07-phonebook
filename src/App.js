@@ -19,6 +19,7 @@ class App extends Component {
           <ContactForm />
           <h2>Contacts</h2>
           <Filter />
+           {this.props.isLoadingContacts && <h1>Loading...</h1>}
           <ContactList />
         </Container>
       </>
